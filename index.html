@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P J Joyal's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC;
+        }
+        .bg-primary { background-color: #1E293B; }
+        .text-primary { color: #1E293B; }
+        .text-accent { color: #FB923C; }
+        .bg-accent { background-color: #FB923C; }
+        .bg-card { background-color: #FFFFFF; }
+        .text-secondary { color: #64748B; }
+
+        /* Typing animation styles */
+        .typing-text::after {
+            content: '|';
+            animation: blink-caret .75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #FB923C; }
+        }
+
+        /* Custom shadow for cards */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-primary text-white">
+
+    <!-- Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-primary/90 backdrop-blur-sm shadow-lg rounded-b-xl">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wide">P J Joyal</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                <a href="#" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">Download Resume</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-primary py-4 rounded-b-xl">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#about" class="hover:text-accent transition-colors">About</a>
+                <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                <a href="#" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors">Download Resume</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 lg:px-8">
+
+        <!-- Home/Hero Section -->
+        <section id="home" class="flex flex-col items-center text-center pt-24 md:pt-48 pb-24">
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                P J Joyal
+            </h1>
+            <h2 class="text-2xl md:text-4xl font-light text-accent mb-8">
+                Full-Stack Developer & Digital Problem Solver
+            </h2>
+            <p id="typing-text" class="text-lg md:text-xl max-w-2xl mb-12 text-secondary h-8 md:h-12"></p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#projects" class="bg-accent hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-full transition-colors transform hover:scale-105">
+                    View My Work
+                </a>
+                <a href="#contact" class="bg-white text-primary font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors transform hover:scale-105">
+                    Let's Build Something
+                </a>
+            </div>
+        </section>
+
+        <div class="h-1 bg-gradient-to-r from-accent to-primary rounded-full my-12"></div>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="flex-shrink-0">
+                    <img src="https://placehold.co/400x400/1E293B/F8FAFC?text=P+J+Joyal" alt="P J Joyal" class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-accent shadow-lg transform transition-transform hover:scale-105">
+                </div>
+                <div class="max-w-xl text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">The Human Behind the Code</h2>
+                    <p class="text-lg text-secondary leading-relaxed">
+                        Hey there! I'm P J Joyal – a passionate full-stack developer who loves turning wild ideas into pixel-perfect reality. Currently crushing my diploma (Class of 2027), but I've been coding since before it was cool to have "developer" in your bio.
+                        <br><br>
+                        My superpower? Building seamless web experiences that make users go "wow, that just works!" From crafting responsive frontends with React and Vue to architecting robust backends with Python and Django, I speak fluent code in multiple dialects.
+                        <br><br>
+                        When I'm not debugging at 2 AM (okay, maybe I am), you'll find me exploring the latest web technologies, creating digital designs in Illustrator, or helping teams bring their visions to life through clear communication and solid project management.
+                        <br><br>
+                        I believe great software isn't just about clean code – it's about solving real problems for real people. Ready to build something amazing together?
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-1 bg-gradient-to-r from-primary to-accent rounded-full my-12"></div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Things I've Built</h2>
+            <p class="text-lg text-secondary mb-12">From concept to code, here are some of my latest creations.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-card text-primary rounded-xl p-8 card-shadow transition-transform transform hover:scale-105 hover:bg-gray-50">
+                    <h3 class="text-2xl font-bold mb-2">Project 1: E-commerce Platform</h3>
+                    <p class="text-secondary mb-4">A full-stack e-commerce site with user authentication, product listings, and a secure checkout process.</p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">React</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">Django</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">PostgreSQL</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-accent hover:underline">Live Demo</a>
+                        <a href="#" class="text-accent hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-card text-primary rounded-xl p-8 card-shadow transition-transform transform hover:scale-105 hover:bg-gray-50">
+                    <h3 class="text-2xl font-bold mb-2">Project 2: Social Media App</h3>
+                    <p class="text-secondary mb-4">A social media application with real-time chat, user profiles, and a feed for sharing updates.</p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">Vue</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">MongoDB</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-accent hover:underline">Live Demo</a>
+                        <a href="#" class="text-accent hover:underline">GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-card text-primary rounded-xl p-8 card-shadow transition-transform transform hover:scale-105 hover:bg-gray-50">
+                    <h3 class="text-2xl font-bold mb-2">Project 3: Data Visualization Dashboard</h3>
+                    <p class="text-secondary mb-4">An interactive dashboard to visualize complex datasets with charts and graphs using D3.js.</p>
+                    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">D3.js</span>
+                        <span class="bg-primary text-white text-xs font-medium px-2.5 py-1 rounded-full">API</span>
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-accent hover:underline">Live Demo</a>
+                        <a href="#" class="text-accent hover:underline">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-1 bg-gradient-to-r from-accent to-primary rounded-full my-12"></div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Create Together</h2>
+            <p class="text-lg text-secondary mb-12 max-w-2xl mx-auto">
+                Ready to build something amazing? Whether you have a project in mind or just want to say hi, feel free to reach out.
+            </p>
+            <div class="bg-card text-primary rounded-xl p-8 md:p-12 max-w-xl mx-auto card-shadow">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-accent focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-accent focus:outline-none transition-colors"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-accent hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors transform hover:scale-105">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+            <div class="mt-8 flex justify-center space-x-6 text-2xl">
+                <a href="mailto:pjjoyal35@gmail.com" class="text-secondary hover:text-accent transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M2.003 5.884L12 11.882L21.997 5.884C21.997 5.727 22 5.565 22 5.4C22 3.844 20.844 2.688 19.288 2.688H4.712C3.156 2.688 2 3.844 2 5.4C2 5.565 2.003 5.727 2.003 5.884Z"></path>
+                        <path d="M2 7.5V18.6C2 20.156 3.156 21.312 4.712 21.312H19.288C20.844 21.312 22 20.156 22 18.6V7.5L12 13.5L2 7.5Z"></path>
+                    </svg>
+                </a>
+                <a href="https://github.com/pjjoyal123" target="_blank" class="text-secondary hover:text-accent transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.11.82-.26.82-.577v-2.015c-3.338.72-4.043-1.61-4.043-1.61-.546-1.385-1.332-1.755-1.332-1.755-1.088-.745.083-.73.083-.73 1.2.083 1.834 1.237 1.834 1.237 1.07 1.835 2.809 1.303 3.491 1.05.11-.815.421-1.303.766-1.604-2.665-.304-5.466-1.333-5.466-5.932 0-1.309.467-2.383 1.237-3.22-.124-.304-.537-1.528.117-3.18 0 0 1.008-.323 3.302 1.234.957-.266 1.986-.399 3.014-.403 1.028.004 2.057.137 3.014.403 2.294-1.557 3.302-1.234 3.302-1.234.654 1.652.241 2.876.117 3.18.77.837 1.237 1.911 1.237 3.22 0 4.59-2.805 5.626-5.476 5.922.43.37.818 1.12.818 2.25v3.42c0 .318.216.69.82.578C20.562 21.8 24 17.302 24 12c0-6.627-5.373-12-12-12z"></path>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" class="text-secondary hover:text-accent transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM4 21h4V9H4v12zM6 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-sm text-secondary mt-8">Currently available for new opportunities.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary py-8 text-center text-secondary">
+        <p>&copy; 2024 P J Joyal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Typing animation script
+        const typingTextElement = document.getElementById('typing-text');
+        const phrases = ["Full-Stack Developer", "Digital Problem Solver", "Crafting Web Experiences That Actually Work"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            const currentText = currentPhrase.substring(0, charIndex);
+
+            typingTextElement.textContent = currentText;
+
+            if (!isDeleting) {
+                charIndex++;
+                if (charIndex > currentPhrase.length) {
+                    isDeleting = true;
+                    setTimeout(type, 1000); // Pause before deleting
+                } else {
+                    setTimeout(type, 50);
+                }
+            } else {
+                charIndex--;
+                if (charIndex < 0) {
+                    isDeleting = false;
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(type, 500); // Pause before typing next phrase
+                } else {
+                    setTimeout(type, 25);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
